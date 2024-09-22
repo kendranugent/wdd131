@@ -1,0 +1,42 @@
+body{
+    margin: auto;
+    width: 90%;
+    border: .5px solid;
+    padding: 10px;
+}
+
+h1{
+    font-size: 50px;
+}
+h1, h2{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h2 {
+    color: #006eb6;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+main{
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    line-height: 1.5;
+}
+
+li{
+    padding-bottom: 10px;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
