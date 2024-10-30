@@ -1,10 +1,9 @@
 const themeSelector = document.querySelector('#theme-selector');
+const bodyElement = document.body;
+const logoElement = document.querySelector('.logo');
 
 function changeTheme() {
     const selectedTheme = themeSelector.value;
-    
-    const bodyElement = document.body;
-    const logoElement = document.querySelector('.logo');
 
     if (selectedTheme === "dark") {
         bodyElement.classList.add('dark');
@@ -15,4 +14,8 @@ function changeTheme() {
     }
 }
 
+// Add event listener to theme selector dropdown
 themeSelector.addEventListener('change', changeTheme);
+
+// Initialize theme to light on page load
+if (themeSelector.value === "light") changeTheme();

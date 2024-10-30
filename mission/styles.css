@@ -1,23 +1,25 @@
+/* Dark theme styles */
 body.dark {
     background-color: #333;
     color: white;
 }
 
 body.dark h2 {
-    color: #A4C8E1; /* Adjust this to a more accessible blue */
+    color: #A4C8E1; /* Accessible blue color */
 }
 
-body{
+/* General page styling */
+body {
     margin: auto;
     width: 90%;
-    border: .5px solid;
+    border: 0.5px solid;
     padding: 10px;
 }
 
-h1{
+h1 {
     font-size: 50px;
 }
-h1, h2{
+h1, h2 {
     text-align: left;
     display: flex;
     align-items: center;
@@ -30,7 +32,7 @@ h2 {
     letter-spacing: 3px;
 }
 
-main{
+main {
     max-width: 600px;
     display: block;
     margin-left: auto;
@@ -39,11 +41,11 @@ main{
     line-height: 1.5;
 }
 
-li{
+li {
     padding-bottom: 10px;
 }
 
-img{
+img.logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
