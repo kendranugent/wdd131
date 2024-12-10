@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
-  --primary-color: #52489c;
-  --secondary-color: #59c3c3;
-  --accent-color: #f45b69;
-  --text-dark: #333;
-  --text-light: #ebebeb;
-  --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: 'Mooli', sans-serif;
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
 }
 
 body {
@@ -49,10 +49,21 @@ nav {
     color: var(--text-light);
     font-size: 1.2em;
     cursor: pointer;
-    padding: 0; 
+    padding: 0;
 }
 
 #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    z-index: 1;
+}
+
+#nav-links.hide {
     display: none;
 }
 
@@ -63,6 +74,8 @@ nav {
 #nav-links a {
     color: var(--text-light);
     text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
 }
 
 .gallery {
@@ -79,20 +92,17 @@ img {
     cursor: pointer; /* Added for image interaction */
 }
 
-@media screen and (min-width: 700px) {
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media screen and (min-width: 1000px) {
-    nav #menu-button {
+    #menu-button {
         display: none;
     }
 
     #nav-links {
         display: flex;
         justify-content: center;
+        position: static;
+        flex-direction: row;
+        background-color: transparent;
     }
 
     #nav-links li {
@@ -139,3 +149,95 @@ img {
     right: 10px;
     cursor: pointer;
 }
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    z-index: 100; /* Ensure nav menu appears over other content */
+}
+
+#nav-links.hide {
+    display: none;
+}
+
+#nav-links li {
+    list-style: none;
+    margin: 0.5em 0;
+}
+
+#nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5em;
+    display: block;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #menu-button {
+        display: none; /* Hide the menu button */
+    }
+
+    nav {
+        display: flex; /* Make the nav a flex container */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    #nav-links {
+        display: flex; /* Make nav-links a flex container */
+        justify-content: center; /* Center items horizontally */
+        flex-direction: row; /* Arrange items horizontally */
+        background-color: transparent;
+        position: static; /* Remove absolute positioning */
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #nav-links li {
+        margin-right: 2em; /* Adjust spacing between items */
+    }
+
+    #nav-links a {
+        color: var(--text-light); /* Ensure text color is consistent */
+        text-decoration: none;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr; /* Adjust grid layout */
+    }
+}
+

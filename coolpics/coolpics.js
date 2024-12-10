@@ -1,3 +1,27 @@
+// Function to toggle the visibility of the menu
+function toggleMenu() {
+    const menu = document.querySelector("#nav-links");
+    menu.classList.toggle("hide");
+}
+
+// Add an event listener to the menu button
+document.querySelector("#menu-button").addEventListener("click", toggleMenu);
+
+// Ensure the menu is shown or hidden based on window size on page load and resize
+function handleResize() {
+    const menu = document.querySelector("#nav-links");
+    const viewer = document.querySelector(".viewer");
+
+    if (window.innerWidth > 1000) {
+        menu.classList.remove("hide"); // Show menu for large screens
+        viewer.classList.remove("show"); // Hide modal for large screens
+    } else {
+        menu.classList.add("hide"); // Hide menu for small screens
+    }
+}
+
+window.addEventListener("resize", handleResize);
+
 // Function to toggle the visibility of the modal
 function toggleModal() {
     const viewer = document.querySelector(".viewer");
@@ -15,20 +39,12 @@ function openModal(event) {
 // Close the modal when the close button is clicked
 document.querySelector(".close-viewer").addEventListener("click", toggleModal);
 
-// Open modal on image click
-document.querySelectorAll(".gallery-item").forEach(item => {
-    item.addEventListener("click", openModal);
-});
-
-// Hide the modal when the window is resized beyond 1000px
-function handleResize() {
-    const viewer = document.querySelector(".viewer");
-    if (window.innerWidth > 1000) {
-        viewer.classList.remove("show");
+// Open modal on image click (use event delegation)
+document.querySelector(".gallery").addEventListener("click", function(event) {
+    if (event.target.tagName === 'IMG') {
+        openModal(event);
     }
-}
-
-window.addEventListener("resize", handleResize);
+});
 
 // Initialize the modal state on page load
 handleResize();
