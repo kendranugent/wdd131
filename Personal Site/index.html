@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection</title>
+    <meta name="description" content="My personal movie collection">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Movie Collection">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="My personal movie collection">
+    <meta property="og:image" content="images/barbiemermaid.jpeg"> <!-- Example image -->
+    <meta property="og:url" content="https://www.example.com"> <!-- Replace with your page URL -->
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie collection">
+    <meta name="twitter:description" content="My personal Movie collection">
+    <meta name="twitter:image" content="barbiemermaid.jpeg"> <!-- Example image -->
+
+    <!-- Other existing links and scripts -->
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="movies.mjs"></script>
+    <script src="main.js" defer></script>
+    <meta name="author" content="Kendra Nugent">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/Kendra’s (1).png" alt="Website logo of DVD with text">
+                <h1>Movie Collection</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" name="search" placeholder="Search for a movie" />
+                <button type="submit" aria-label="Search">
+                    <img src="images/search.svg" alt="Search icon" />
+                </button>
+            </div>
+            <nav class="menu">
+                <ul class="menu-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">All Movies</a></li>
+                    <li><a href="form.html">Add Movie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Box for introductory text -->
+        <div class="intro-box">
+            <p>This website is intended to help me organize my movie collection. Using the search bar, I can find specific genres and titles. I have 2 child pages. One for the full complete list of movies and one to add another movie to the cite (hypothetically). I really enjoy having physical copies of my favorite movies and I am exited to share that passion with you.</p>
+        </div>
+        
+        <!-- movie section -->
+        <section class="movies">
+            <article class="movie">
+                <img src="images/barbiemermaid.jpeg" alt="Barbie in a Mermaid Tale">
+                <h2>Barbie in a mermaid tale</h2>
+                <div class="rating" role="img" aria-label="Rating: 3 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </div>
+                <p>"It revolves around Merliah Summers, a surfing champion who learns she is half-mermaid and sets out for an undersea adventure to rescue her mother."</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="Instagram logo"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="YouTube logo"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest logo"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

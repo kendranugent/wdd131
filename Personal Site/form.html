@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Addition</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/Kendra’s (1).png" alt="Website logo of DVD with text">
+                <h1>New movie form</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" name="search" placeholder="Search for a movie" />
+                <button type="submit" aria-label="Search">
+                    <img src="images/search.svg" alt="Search icon" />
+                </button>
+            </div>
+            <nav class="menu">
+                <ul class="menu-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">All Movies</a></li>
+                    <li><a href="form.html">Add Movie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="form-container">
+            <h2>Movie Addition</h2>
+            <form id="movieForm">
+                <fieldset>
+                    <legend>Movie Information</legend>
+                    <div class="item">
+                        <label for="title">Title<span>*</span></label>
+                        <input id="title" type="text" name="title" required>
+                    </div>
+                    <div class="item">
+                        <label for="year">Year<span>*</span></label>
+                        <select id="year" name="year" required></select>
+                    </div>
+                    <div class="item">
+                        <label for="genre1">Genre 1<span>*</span></label>
+                        <input id="genre1" type="text" name="genre1" required>
+                    </div>
+                    <div class="item">
+                        <label for="genre2">Genre 2<span>*</span></label>
+                        <input id="genre2" type="text" name="genre2" required>
+                    </div>
+                    <div class="item">
+                        <label for="rating">Rating<span>*</span></label>
+                        <select id="rating" name="rating" required>
+                            <option value="g">G</option>
+                            <option value="pg">PG</option>
+                            <option value="pg-13">PG-13</option>
+                            <option value="r">R</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <div class="btn-block">
+                    <button type="submit" id="submitButton">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="summary" style="display:none;"></div>
+    </main>
+    
+    <script src="form.js"></script>
+</body>
+</html>

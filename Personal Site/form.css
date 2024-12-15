@@ -1,0 +1,230 @@
+/* Root variables */
+:root {
+    --primary-color: #254E70; /* Main theme color */
+    --secondary-color: #37718E; /* Accent color */
+    --text-dark: #333; /* Dark text */
+    --text-light: #ffffff; /* Light background */
+    --primary-font: Georgia, Garamond; /* Font for general text */
+    --secondary-font: Garamond; /* Font for headings */
+}
+
+/* Global styles */
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body spans at least the height of the viewport */
+}
+
+main {
+    flex-grow: 1; /* Push the footer to the bottom */
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+    margin: 0.5em 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo img {
+    max-width: 50px;
+}
+
+.logo h1 {
+    font-family: var(--secondary-font);
+    font-size: 2em;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5em;
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Adjust as needed */
+}
+
+.search-bar input {
+    padding: 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.search-bar button img {
+    width: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links a {
+    color: var(--text-light);
+    padding: 0.5em 1em;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.menu-links a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Movie Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+fieldset {
+    border: 1px solid var(--primary-color);
+    padding: 1em;
+    border-radius: 8px;
+}
+
+legend {
+    font-family: var(--secondary-font);
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+label {
+    font-family: var(--secondary-font);
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.radio input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+.rating-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.rating-toggle label {
+    font-family: var(--secondary-font);
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+.rating-toggle input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+.btn-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
